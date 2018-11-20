@@ -1,0 +1,153 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+}
+html, body {
+  margin: 0;
+}
+
+html {
+  background-color: white;
+  color: white;
+  font-family:'Impact', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: black;
+  height:50px;
+  color: white;
+  border: 1rem;
+  padding-left: 1rem;
+  padding-top: .5rem;
+}
+header img {
+  height: 22px;
+  float: left;
+}
+
+header nav a {
+  display: inline-block;
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+  text-decoration: none;
+  float: right;
+  font-weight: 600;
+  font-size: 22px;
+  clear: right;
+  padding-right: 3rem;
+}
+
+.boston {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.boston img {
+  opacity: .8;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 25vw;  <!-- how to make this responsive -->
+}
+div.campus{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh, auto;
+  grid-template-areas:
+  "header header"
+  "content map"
+  padding: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #f6f6f6;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  color: black;
+}
+h3.null {
+  visibility: hidden;
+}
+h3.header {
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+div.content {
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight:400;
+  font-size: 25px;
+}
+
+div.hours {
+  padding-top: 2rem;
+}
+button{
+  height: 3rem;
+  width: 10rem;
+  background: red;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 4px;
+}
+
+div.map {
+  justify-content: center;
+}
+div.map img {
+  width:85%;
+  border-style: solid;
+  border-color: grey;
+  margin-bottom: 2rem;
+}
+
+div.directions {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  color: black;
+  display: block;
+  background: #f6f6f6;
+  margin: 3em;
+  padding: 2em;
+}
+
+h3.gettinghere {
+  font-family: 'Georgia', serif;
+  font-size: 1.7em;
+  color: black;
+}
+
+ul {
+padding: 2em;
+}
+
+
+@media (max-width: 800px) {
+  .large {
+    display:none;
+  }
+  .small {
+    display: initial;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
+}
