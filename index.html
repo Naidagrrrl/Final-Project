@@ -30,34 +30,112 @@
 
      <div class="content"> 125 Summer Street <br>
        13th Floor <br>
-       Boston, MA 02110
+       Boston, MA 02110 <br>
+         <br>
+      <strong>781-704-8926</strong>
 
        <div class="hours">
          Monday - Thursday: 8AM - 10PM<br>
          Friday: 8AM - 6PM;<br>
          Saturday: 9AM - 5PM
        </div>
-      <button>CONTACT US</button> <!--need to add click send email-->
+
+      <div class="parking">
+        Parking is expensive in downtown Boston so we recommend using the MBTA.<br>
+        We’re a short walk from the South Station & Downtown Crossing stops.
+      </div>
+
+        <div class="pheader">
+         <a href="content/content.html">Parking Information</a>
+        </div>
+
+      <a href="mailto:boston@generalassemb.ly" class='contact'>CONTACT US</a>
      </div>
 
     <div class="map">
-      <img src="images/googlemap.png" alt="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2948.499077035458!2d-71.05964698454395!3d42.35320207918725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370826ecd6ec7%3A0xda9b05ac2c66cd13!2s125+Summer+St%2C+Boston%2C+MA+02111!5e0!3m2!1sen!2sus!4v1543158770203" width="550" height="450" style="border:0" allowfullscreen></iframe> <!--need to make responsive-->
     </div>
   </div>
 
-  <div class="directions">
-    <h3><strong></strong>Getting Here</strong></h3>
-    <ul>
-    <li>Parking Information</li>
-    <li>Bicycle Parking</li>
-    <li><a href="https://goo.gl/maps/L4DYsfVMft22">Directions</a></li>
-    </ul>
+  <div class="faq">
+    <h3 class='header1'>Frequently Asked Questions</h3>
+        <div class='cwe'>Classes and Workshops</div>
+              <div class='cwetext'>
+                <div class='question'>I enrolled in a workshop and I need to cancel?</div>
+                	<div class='answer'> <strong>Cancel Enrollment</strong><br>
+                    <br>
+                    Please email boston@generalassembly.com and a member of our Staff will respond within 24 business hours.</div>
+
+                <div class='question'>What’s your refund policy?</div>
+                  <div class='answer'><strong>Refund Policy</strong> <br>
+                    <br>
+                	We understand that, sometimes, plans change. If you can no longer make it to a class or workshop, please email us at least 7 days before the scheduled event date. No refunds will be given to cancellations made within a week of the class or workshop.</div>
+
+                <div class='question'>I want to attend a workshop or event, but it's sold out!</div>
+                  <div class='answer'><strong>Sold Out Event</strong><br>
+                    <br>
+                    Sorry about that! Because we want to provide our students with the optimal learning experience, tickets are limited and we can’t sell more. However, you can sign up for the wait-list in case we have no-shows. To stay in the loop about upcoming events, subscribe to our weekly newsletter.</div>
+              </div>
 
 
+          <div class ='immersive'>I'm Enrolled in an Immersive</div>
+              <div class='immersivetext'>
+                <div class='question'>How do I access my Pre-work
+                </div>
+              	   <div class='answer'><strong>Where's my Pre-work?</strong><br>
+                     <br>Log into my.generalassemb.ly and you should see it
+                   </div>
 
+                <div class='question'>Already did that and it still doesn’t look right - now what?
+                </div>
+              	  <div class='answer'><strong>Still Can't Find it</strong><br>
+                    <br>Contact your Student Services Team at studentservicesboston@generalassembly.com
+                  </div>
 
-</div>
+                  <div class='question'>I took a class and didn’t receive my Letter of Completion?
+                  </div>
+                	  <div class='answer'><strong>Need my Letter of Completion</strong><br>
+                      <br>Contact your Student Services Team at studentservicesboston@generalassemb.ly and please provide your name and email used to register for the class (if available)
+                    </div>
+
+                  <div class='question'>I just got an email that my tuition is due - How do I make a payment?
+                  </div>
+                	  <div class='answer'><strong>Give us Your Money</strong><br>
+                      <br>Please log into your account on generalassemb.ly
+                    </div>
+                </div>
+
+        <div class='other'>Other Assistance</div>
+
+            <div class='othertext'>
+
+              <div class='question'>I love your Campus! - Do you rent out the space?
+              </div>
+
+            	  <div class='answer'><strong>Its pretty sweet, isn't it?</strong><br>
+                  <br>Sometimes? - it depends if we have room availability.  Please reach out to our Operations Manager at boston@generalassembly.com
+                </div>
+            </div>
+  </div>
 
 <footer></footer>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+      $('.answer').hide();
+      $('.question').click(function() {
+        $(this).next().toggle();
+      });
+  });
+</script>
+
+
 </body>
+
+
 </html>

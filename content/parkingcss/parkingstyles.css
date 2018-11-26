@@ -1,0 +1,79 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+}
+html, body {
+  margin: 0;
+}
+
+html {
+  background-color: white;
+  color: white;
+  font-family:'Impact', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: black;
+  height:50px;
+  color: white;
+  border: 1rem;
+  padding-left: 1rem;
+  padding-top: .5rem;
+  letter-spacing: 1px;
+}
+
+header img {
+  height: 22px;
+  float: left;
+}
+body {
+  background: white;
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: black;
+}
+
+div.parking {
+  background: #f6f6f6;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Impact', sans-serif;
+  font-size: 48px;
+  letter-spacing: 1px;
+  padding-bottom:1rem;
+}
+img.map{
+  float: right;
+  height: 25vw;
+  clear;
+}
+div.indent {
+  padding-left: 2rem;
+
+}
+div.rates {
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+div.location {
+  font-size: 16px;
+}
+
+div.text {
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-bottom: .5rem;
+  line-height: 1.5;
+}
