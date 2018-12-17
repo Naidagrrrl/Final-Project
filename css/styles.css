@@ -12,8 +12,17 @@ html {
   font-family:'Impact', sans-serif;
   font-weight: 300;
   font-size: 24px;
-  text-decoration: none;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+a:hover, a:active, a:visited  {
+  color: red;
+  text-decoration: none;
 }
 
 header {
@@ -60,29 +69,35 @@ header nav a {
 
 div.campus{
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 10vh, auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto minmax(500px, auto);
   grid-template-areas:
   "header header"
-  "content map"
+  "content content"
+  "map map";
   padding: 2rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   background: #f6f6f6;
   font-family: 'Georgia', serif;
   font-size: 20px;
   color: black;
+  grid-gap: 1rem;
 }
-h3.null {
-  visibility: hidden;
+
+iframe {
+  height: 100%;
+  width:100%;
 }
-h3.header {
+
+h2.header {
+  grid-area: header;
   padding-top: 1rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
+
 div.content {
+  grid-area: content;
   padding-left: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -105,10 +120,6 @@ div.pheader{
  text-decoration: none;
 }
 
-div.pheader :hover {
-  text-decoration: underline;
-  color: red;
-}
 
 .contact{
   display:flex;
@@ -129,77 +140,92 @@ div.pheader :hover {
   border-style: solid;
 }
 
+a.contact:hover {
+  background: #de3535;
+  color: white;
+}
+
 div.map {
+  grid-area: map;
   justify-content: center;
-  width:85%;
   padding-left: 1rem;
   margin-bottom: 2rem;
 }
 
 div.faq {
   font-family: 'Georgia', serif;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
-h3.header1 {
-  padding-left: 6em;
+h2.header1 {
+  margin-left: 2rem;
   padding-bottom: 1rem;
 }
 div.question {
-  padding-bottom: 1rem;
+  padding:1rem;
+  padding-top: .75rem;
+  margin-left: 1rem;
+  padding-bottom: .75rem;
 }
+
 div.question:hover {
-  background: #f6f6f6;
   font-weight: 600;
-  width: 75vw;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-right: 5rem;
 }
 
 div.answer {
-  background: darkGray;
-  width: 75vw;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  background: #f6f6f6;
+  padding:1rem;
+  margin-left: 1rem;
   margin-bottom: 1rem;
 }
 
-
 div.cwe {
   color:#de3535;
+  font-size: 20px;
   font-weight:bold;
-  padding-left: 6rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-left: 3rem;
+
 }
 div.cwetext {
-  padding-left: 7rem;
-  padding-bottom: 2rem;
-}
+ padding-bottom: 1rem;
+ padding-left: 2rem;
+ }
+
 div.immersive {
   color: #de3535;
   font-weight:bold;
-  padding-left: 6rem;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+ div.immersivetext {
   padding-bottom: 1rem;
-}
-div.immersivetext {
-  padding-left: 7rem;
-  padding-bottom: 2rem;
-}
+  padding-left: 3rem;
+  }
 
 div.other{
   color: #de3535;
   font-weight:bold;
-  padding-left: 6rem;
-  padding-bottom: 1rem;
-}
+  font-size: 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-left: 3rem;
+  }
+
 div.othertext {
-  padding-left: 7rem;
-  padding-bottom: 2rem;
-}
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  }
 
 
 @media (max-width: 800px) {
@@ -214,5 +240,21 @@ div.othertext {
   }
   aside {
     width: 100%;
+  }
+}
+
+@media (min-width: 800px){
+
+  div.campus{
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "header header"
+    "content map";
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  div.faq{
+    margin: 0 3rem;
   }
 }
